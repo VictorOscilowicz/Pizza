@@ -1,4 +1,4 @@
-xclass pizza{
+class pizza{
   //type constructor below
   consructor (s,mT,vT){
     this.size = s;
@@ -16,11 +16,11 @@ xclass pizza{
       this.sizeCost=9.99;
       return this.sizeCost;
     }
-    else(this.size=="large"){
+    else if(this.size=="large"){
       this.sizeCost=12.99;
       return this.sizeCost;
     }
-    else(this.size=="extra large"){
+    else{
       this.sizeCost=15.99;
       return this.sizeCost;
     }
@@ -29,21 +29,30 @@ xclass pizza{
   //type class functions below
   toppingCost(top){
     if(this.top==meatToppings){
-      this.toppingCost=this.meatToppings.length*.99;
+      this.toppingCost=meatToppings.length*.99;
       return this.toppingCost;
     }
     else if(this.top==veggieToppings){
-      this.toppingCost=this.veggieToppings.length*.50;
+      this.toppingCost=veggieToppings.length*.50;
       return this.toppingCost;
     }
   }
   price(){
     return this.sizeCost+this.toppingCost;
   }
-  static promotionalDeal(p,pt){
-    this.pizza=p;
-    this.percentage=pt;
-    new price()=
+  static promotionalDeal(pizza,percentage){
+    promotionalDeal=pizza*percentage;
+    return promotionalDeal;
   }
-  addTopping()
+  addTopping(toptype,newtype){
+    if(toptype=="meat"){
+      this.meatToppings.push(newtop);
+    }
+    else if(toptype="veggie"){
+      this.veggieToppings.push(newtop);
+    }
+  }
+  removeTopping(toptype,newtype){
+    if()
+  }
 }
